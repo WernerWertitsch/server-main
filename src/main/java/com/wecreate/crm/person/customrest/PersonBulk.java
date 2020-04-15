@@ -1,7 +1,5 @@
-package com.wecreate.crm.address.customrest;
+package com.wecreate.crm.person.customrest;
 
-import com.wecreate.crm.address.model.Address;
-import com.wecreate.crm.address.repository.AddressRepository;
 import com.wecreate.crm.person.model.Person;
 import com.wecreate.crm.person.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,22 +13,22 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
-@RequestMapping("/addresses/bulk")
-public class Bulk {
+@RequestMapping("/people/bulk")
+public class PersonBulk {
 
-    Logger logger = Logger.getLogger(Bulk.class.getName());
+    Logger logger = Logger.getLogger(PersonBulk.class.getName());
 
     @Autowired
-    AddressRepository addressRepository;
+    PersonRepository personRepository;
 
     @PostMapping
-    public Iterable<Address> postBulk(@RequestBody List<Address> addresses) {
-        List<Address> ret = new ArrayList<>();
-        addresses.forEach(a -> {
+    public Iterable<Person> postBulk(@RequestBody List<Person> people) {
+        List<Person> ret = new ArrayList<>();
+        people.forEach(p -> {
             try {
-                ret.add(this.addressRepository.save(a));
+                ret.add(this.personRepository.save(p));
             } catch (Exception e) {
-                logger.warning("Could not import address:"+a);
+                logger.warning("Could not import person:"+p);
             }
         });
         return ret;
