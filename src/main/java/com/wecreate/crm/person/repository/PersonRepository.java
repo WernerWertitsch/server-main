@@ -14,8 +14,8 @@ public interface PersonRepository extends MongoRepository<Person, String> {
     @RestResource(path="/fuzzy")
     public Page<Person>
     findPeopleByFirstnameContainingIgnoreCaseOrLastnameContainingIgnoreCase(
-            @Param(value = "n1") String firstname,
-            @Param(value = "n2") String lastName,
+            @Param(value = "firstName") String firstname,
+            @Param(value = "lastName") String lastName,
             Pageable pageable);
 
 }

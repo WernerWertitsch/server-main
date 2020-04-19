@@ -11,7 +11,7 @@ public class Address {
 
     @Id
     String id;
-    String clientid;
+//    String clientid;
     String type;
     String addressline1;
     String addressline2;
@@ -29,13 +29,13 @@ public class Address {
         this.id = id;
     }
 
-    public String getClientid() {
-        return clientid;
-    }
-
-    public void setClientid(String clientid) {
-        this.clientid = clientid;
-    }
+//    public String getClientid() {
+//        return clientid;
+//    }
+//
+//    public void setClientid(String clientid) {
+//        this.clientid = clientid;
+//    }
 
     public String getType() {
         return type;

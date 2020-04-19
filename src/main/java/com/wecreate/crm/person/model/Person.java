@@ -22,6 +22,7 @@ public class Person {
     LocalDate dateCreated;
     List<String> email;
     List<String> phone;
+    List<String> addresses;
 
     public String getId() {
         return id;
@@ -77,5 +78,13 @@ public class Person {
 
     public void setPhone(List<String> phone) {
         this.phone = phone;
+    }
+
+    public List<String> getAddresses() {
+        return addresses;
+    }
+
+    public void setAddresses(List<String> addresses) {
+        this.addresses = addresses;
     }
 }
