@@ -3,7 +3,7 @@ package com.wecreate.crm.stimmbericht;
 public class Stimmbericht {
 
     String id;
-    String clientid;
+    String kalender_id;
     String luftfeuchtigkeit;
     String klavierstimmung_vorher;
     String klavierstimmung_nachher;
@@ -23,6 +23,6 @@ public class Stimmbericht {
     String transport;
     String nacharbeit;
     String zahlungsart;
-    Boolean kostenvoranschlag;
+    String kostenvoranschlag;
 
 }
